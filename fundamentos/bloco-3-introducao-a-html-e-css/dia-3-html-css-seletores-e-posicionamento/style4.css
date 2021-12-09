@@ -1,0 +1,34 @@
+div:hover {
+    border: red solid 2px;
+}
+
+div:nth-of-type(1) {
+    background-color: blue;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div:nth-of-type(2) {
+    background-color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div:nth-of-type(3) {
+    background-color: plum;
+    font-style: italic;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+div:nth-of-type(4) {
+    background-color: #792C3b;
+    font-family: monospace;
+}
+
+div:nth-of-type(5) {
+    background-color: #CCBBFF;
+    font-style: italic;
+    font-family: unset;
+}
+

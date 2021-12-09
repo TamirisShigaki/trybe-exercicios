@@ -1,0 +1,70 @@
+body {
+    margin: 0; 
+}
+
+.header {
+ border: solid ;
+}
+
+.titulo {
+    border: solid;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+ul.nav li {
+    display: inline-block;
+    margin: 10px 10%;
+   }
+
+ul {
+    padding: 0;
+}
+
+.nav {
+    border: solid;
+    text-align: center;
+}
+
+.main {
+    border: solid;
+   }
+
+.section {
+    border: solid;
+    margin: 2px;
+    margin-right: 30%;
+    text-align: center;
+   }
+
+.article {
+    border: solid;
+    margin: 2px;
+   }
+
+.video {
+    border: solid;
+    margin: 10px;
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    left: 72%;
+   }
+
+.bio {
+    border: solid;
+    margin: 2px;
+    position: absolute;
+    top: 600px;
+    right: 10px;
+    left: 75%;
+   }
+
+.footer {
+    border: solid;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 90px;
+   }

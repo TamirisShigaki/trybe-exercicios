@@ -1,0 +1,67 @@
+ol {
+    background-color: yellow;
+}
+
+.verde {
+    color: green;
+}
+
+.maiusculo {
+    text-transform: uppercase;
+}
+
+body h1, h3 {
+    color: red;
+}
+
+body h1 {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+body li em {
+    font-weight: bold;
+}
+
+.color {
+    color: blue;
+}
+
+.java {
+    background-color: pink;
+}
+
+a {
+    text-decoration: none;
+    color: gray
+}
+
+
+ul.aliados li:nth-of-type(1):hover a {
+    color: orange;
+    font-weight: bold;
+}
+
+ul.aliados li:nth-of-type(2):hover a {
+    color: green;
+    font-weight: bold;
+}
+
+ul.aliados li:nth-of-type(3):hover a {
+    color: black;
+    font-weight: bold;
+}
+
+ul.aliados li:nth-of-type(4):hover a {
+    color: yellow;
+    font-weight: bold;
+}
+
+ul.aliados li:nth-of-type(5):hover a {
+    color: #708B03;
+    font-weight: bold;
+}
