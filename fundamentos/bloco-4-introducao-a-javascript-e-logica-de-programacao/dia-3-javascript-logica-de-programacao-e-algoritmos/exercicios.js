@@ -51,7 +51,7 @@ verificar quanto caracteres tem cada posicao da array
 verificar cada caracter da palavra e guardar esse valor 
 compara cada palavra guardada qual é menor - comparo duas palavras
 retornar o valor da palavra menor - console.log */
-let array = ['java', 'javascript', 'python', 'html', 'css'];
+/* let array = ['java', 'javascript', 'python', 'html', 'css'];
 let quantCaracter = null; //4 
 let valorComparado = quantCaracter; 
 let posicao = null; //java
@@ -66,7 +66,26 @@ for (let i = 0; i < array.length; i += 0) {
             menorpalavra = posicao
         }
     }
-}
-
+} */
 
 // 4- Um número primo é aquele divisível apenas por 1 e por ele mesmo. Sabendo disso, escreva um algoritmo que retorne o maior número primo entre 0 e 50.
+
+let numero = 50;
+let cont = 0;
+let resultado = 0;
+
+for (let numAtual = 0; numAtual < numero; numAtual += 1) {
+  //começa em 2 pq 0e1 são divisível só por ele msm - não tem .length pq não é array
+  if (numAtual % numAtual === 0) {
+    // se o resto da divisão entre meu numero e ele msm é 0, soma +1
+    cont += 1;
+  } else if (cont === 1) {
+    // se o resto da divisão for 1, o resultado vira o proprio num
+    resultado = numAtual;
+  } else {
+    // zera o contador a cada num incluido
+    cont = 0;
+  }
+}
+
+console.log(resultado);
