@@ -1,3 +1,4 @@
+//Fixando - objetos
 /* 1 - Crie um objeto player contendo as variáveis listadas abaixo.
 let name = 'Marta';
 let lastName = 'Silva';
@@ -53,3 +54,27 @@ console.log(
     player.medals.silver +
     " medalhas de prata"
 );
+
+//Fixando - for/in
+//1 - Usando o objeto abaixo, utilize For/in e imprima no console a mensagem 'Olá xxxxx' para cada nome, substituindo o xxxxx pelo nome em questão.
+
+let names = {
+  person1: "João",
+  person2: "Maria",
+  person3: "Jorge",
+};
+for (let posicao in names) {
+  console.log("Olá " + names[posicao]);
+}
+
+//2 - Usando o objeto abaixo, utilize For/in e imprima um console.log com as chaves e valores desse objeto.
+
+let car = {
+  model: "A3 Sedan",
+  manufacturer: "Audi",
+  year: 2020,
+};
+
+for (let key in names) {
+  console.log(key, names[key]);
+}
