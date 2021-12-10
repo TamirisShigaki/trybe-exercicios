@@ -74,18 +74,15 @@ let numero = 50;
 let cont = 0;
 let resultado = 0;
 
-for (let numAtual = 0; numAtual < numero; numAtual += 1) {
-  //começa em 2 pq 0e1 são divisível só por ele msm - não tem .length pq não é array
-  if (numAtual % numAtual === 0) {
-    // se o resto da divisão entre meu numero e ele msm é 0, soma +1
-    cont += 1;
-  } else if (cont === 1) {
-    // se o resto da divisão for 1, o resultado vira o proprio num
-    resultado = numAtual;
-  } else {
-    // zera o contador a cada num incluido
-    cont = 0;
+for (let numAtual = 2; numAtual < numero; numAtual += 1) {
+  for (let numDiv = 2; numDiv < numero; numDiv += 1) {
+    if (numAtual % numDiv === 0) {
+      cont += 1;
+    }
   }
+  if (cont === 1) {
+    resultado = numAtual;
+  }
+  cont = 0;
 }
-
 console.log(resultado);
