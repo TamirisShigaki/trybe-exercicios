@@ -23,8 +23,8 @@ console.log(palindromo("desenvolvimento")); */
 /* 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 Array de teste: [2, 3, 6, 7, 10, 1]; .
 Valor esperado no retorno da função: 4 . */
-/* 
-function inteiros(array) {
+
+/* function inteiros(array) {
   let valorMaior = 0;
   for (let index in array) {
     if (array[valorMaior] < array[index]) {
@@ -39,7 +39,7 @@ console.log(inteiros([2, 3, 6, 7, 10, 1])); */
 Array de teste: [2, 4, 6, 7, 10, 0, -3]; .
 Valor esperado no retorno da função: 6 . */
 
-function inteiros(array) {
+/* function inteiros(array) {
   let valorMenor = 0;
   for (let index in array) {
     if (array[valorMenor] > array[index]) {
@@ -48,7 +48,7 @@ function inteiros(array) {
   }
   return valorMenor;
 }
-console.log(inteiros([2, 4, 6, 7, 10, 0, -3]));
+console.log(inteiros([2, 4, 6, 7, 10, 0, -3])); */
 
 /* 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
 Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']; .
@@ -58,6 +58,26 @@ Valor esperado no retorno da função: Fernanda . */
 Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
 Valor esperado no retorno da função: 2 . */
 
+/* function inteiro(array) {
+  let maisRepete = null;
+  let cont = 0;
+  let repeticao = 0;
+  for (let numero of array) {
+    for (let repetido of array) {
+      if (numero == repetido) {
+        cont += 1;
+      }
+    }
+    if (cont > repeticao) {
+      repeticao = cont;
+      maisRepete = numero;
+    }
+    cont = 0;
+  }
+  return maisRepete;
+}
+console.log(inteiro([2, 3, 2, 5, 8, 2, 3]));
+ */
 /* 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
 Valor de teste: N = 5 .
 Valor esperado no retorno da função: 1+2+3+4+5 = 15 . */
