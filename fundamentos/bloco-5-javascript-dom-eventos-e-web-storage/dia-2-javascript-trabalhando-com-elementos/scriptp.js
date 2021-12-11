@@ -1,4 +1,4 @@
-//PARTE
+//PARTE I - Buscando elementos
 //1- Acesse o elemento elementoOndeVoceEsta.
 const elementoOndeVoceEsta = document.getElementById("elementoOndeVoceEsta");
 
@@ -24,3 +24,25 @@ const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
 
 //8- Agora acesse oterceiroFilho a partir de pai.
 const terceiroFilho = pai.lastElementChild.previousElementSibling;
+
+//PARTE II -Criando elementos
+//1- Crie um irmão para elementoOndeVoceEsta
+let pai = document.getElementById("pai");
+let novoIrmao = document.createElement("section");
+novoIrmao.id = "novoIrmaoElemento";
+pai.appendChild(novoIrmao);
+
+//2- Crie um filho para elementoOndeVoceEsta
+let elementoOndeVoceEsta = document.getElementById(elementoOndeVoceEsta);
+let novoFilho = document.createElement("section");
+novoFilho.id = "novoFilho";
+elementoOndeVoceEsta.appendChild(novoFilho);
+
+//3- Crie um filho para primeiroFilhoDoFilho
+let primeiroFilhoDoFilho = document.getElementById(primeiroFilhoDoFilho);
+let filhoNovo = document.createElement("section");
+filhoNovo.id = "filhoNovo";
+primeiroFilhoDoFilho.appendChild(filhoNovo);
+
+//4- A partir desse filho criado, acesse terceiroFilho
+let terceiroFilho = filhoNovo.parentElement.parentElement.nextElementSibling;
