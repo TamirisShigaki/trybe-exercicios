@@ -143,7 +143,7 @@
       outraCor.style.backgroundColor = "green";
 
       //15- Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
-      let listaNum = document.querySelectorAll(".right-content ul li");
+      /* let listaNum = document.querySelectorAll(".right-content ul li");
 
       for (let i = 0; i < listaNum.length; i += 1) {
         let elemento = listaNum[i];
@@ -153,6 +153,14 @@
           elemento.innerText.includes("dez")
         ) {
           listaNum.remove();
+        }
+      } */
+
+      let linhasLista = document.querySelectorAll(".right-content ul li");
+
+      for (let texto of linhasLista) {
+        if (texto.innerHTML == "nove" || texto.innerHTML == "dez") {
+          texto.remove();
         }
       }
     </script>
