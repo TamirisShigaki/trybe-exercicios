@@ -136,12 +136,14 @@
       recuperaPai.removeChild(removeSection);
 
       //13- Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+      document.querySelector(".right-content").style.marginRight = "auto";
 
       //14- Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
-      document.querySelector(".center-content").style.backgroundColor = "green";
+      let outraCor = document.querySelector(".center-content").parentElement;
+      outraCor.style.backgroundColor = "green";
 
       //15- Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
-      let listaNum = document.querySelectorAll("ul li");
+      let listaNum = document.querySelectorAll(".right-content ul li");
 
       for (let i = 0; i < listaNum.length; i += 1) {
         let elemento = listaNum[i];
@@ -150,7 +152,7 @@
           elemento.innerText.includes("nove") ||
           elemento.innerText.includes("dez")
         ) {
-          listaNum.removeChild();
+          listaNum.remove();
         }
       }
     </script>
