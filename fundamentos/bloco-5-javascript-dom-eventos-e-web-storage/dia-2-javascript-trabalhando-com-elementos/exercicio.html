@@ -58,34 +58,101 @@
   <body>
     <script>
       //1- Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body
+      let tituloH1 = document.createElement("h1");
+      tituloH1.innerText = "Exercício 5.2 - JavaScript";
+      document.querySelector("body").appendChild(tituloH1);
 
-      //2- Adicione a tag main com a classe main-content como filho da tag body ;
+      //2- Adicione a tag main com a classe main-content como filho da tag body;
+      let filhoBody = document.createElement("main");
+      filhoBody.classList.add("main-content");
+      document.querySelector("body").appendChild(filhoBody);
 
       //3- Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+      let filhoMain = document.createElement("section");
+      filhoMain.classList.add("center-content");
+      document.querySelector("main").appendChild(filhoMain);
 
       //4- Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+      let filhoSection = document.createElement("p");
+      filhoSection.innerText = "I'm grott";
+      document.querySelector(".center-content").appendChild(filhoSection);
 
       //5- Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      let sectionLeft = document.createElement("section");
+      sectionLeft.classList.add("left-content");
+      document.querySelector("main").appendChild(sectionLeft);
 
       //6- Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+      let sectionRight = document.createElement("section");
+      sectionRight.classList.add("right-content");
+      document.querySelector("main").appendChild(sectionRight);
 
-      //7- Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
+      //7- Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+      let imagem = document.createElement("img");
+      imagem.classList.add("small-image");
+      imagem.setAttribute("src", "https://picsum.photos/200");
+      document.querySelector(".left-content").appendChild(imagem);
 
       //8- Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+      let lista = document.createElement("ul");
+      document.querySelector(".right-content").appendChild(lista);
+      let numLi = [
+        "um",
+        "dois",
+        "tres",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+
+      for (let i = 0; i < numLi.length; i += 1) {
+        let listaNum = document.createElement("li");
+        listaNum.innerText = numLi[i];
+        document.querySelector(".right-content ul").appendChild(listaNum);
+      }
 
       //9- Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+      for (let i = 0; i < 3; i += 1) {
+        let tagH3 = document.createElement("h3");
+        tagH3.classList.add("description");
+        document.querySelector("main").appendChild(tagH3);
+      }
 
       //10- Adicione a classe title na tag h1 criada;
+      let classH1 = document.querySelector("h1");
+      classH1.classList.add("title");
+      document.querySelector("h1").appendChild(classH1);
 
       //11-Adicione a classe description nas 3 tags h3 criadas;
+      //Linha 121
 
       //12- Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+      let recuperaPai = document.querySelector("main");
+      let removeSection = document.querySelector(".left-content");
+      recuperaPai.removeChild(removeSection);
 
       //13- Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
 
       //14- Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+      document.querySelector(".center-content").style.backgroundColor = "green";
 
       //15- Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+      let listaNum = document.querySelectorAll("ul li");
+
+      for (let i = 0; i < listaNum.length; i += 1) {
+        let elemento = listaNum[i];
+
+        if (
+          elemento.innerText.includes("nove") ||
+          elemento.innerText.includes("dez")
+        ) {
+          listaNum.removeChild();
+        }
+      }
     </script>
   </body>
 </html>
