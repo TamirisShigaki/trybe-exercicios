@@ -12,8 +12,8 @@ function segunda(evento2) {
 }
 
 function terceira(evento3) {
-  let letra = event.key;
-  if (letra !== "a") {
+  let letraA = event.key;
+  if (LetraA !== "a") {
     evento3.preventDefault();
   }
 }
