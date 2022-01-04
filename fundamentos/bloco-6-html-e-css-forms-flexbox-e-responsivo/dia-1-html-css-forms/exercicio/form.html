@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 6.1</title>
+  </head>
+  <body>
+    <fieldset>
+      <p>Nome</p>
+      <input
+        type="text"
+        maxlength="40"
+        placeholder="Digite seu nome"
+        required
+      />
+      <p>E-mail</p>
+      <input
+        type="email"
+        maxlength="50"
+        placeholder="Digite seu e-mail"
+        required
+      />
+      <p>CPF</p>
+      <input type="text" maxlength="11" placeholder="Digite seu CPF" required />
+
+      <p>Endereço</p>
+      <input
+        type="text"
+        maxlength="200"
+        placeholder="Digite seu endereço"
+        required
+      />
+
+      <p>Cidade</p>
+      <input
+        type="text"
+        maxlength="28"
+        placeholder="Digite sua cidade"
+        required
+      />
+
+      <p>Estado</p>
+      <select name="estados" id="" required></select>
+
+      <p>Moradia</p>
+      <select name="tipo-moradia" id="" required>
+        <option value="casa">Casa</option>
+        <option value="apt">Apartamento</option>
+      </select>
+    </fieldset>
+    <br />
+    <fieldset>
+      <p>Sobre mim</p>
+      <textarea
+        name="sobre-mim"
+        id=""
+        cols="70"
+        rows="15"
+        maxlength="1000"
+        required
+      >
+Escreva sobre você</textarea
+      >
+
+      <p>Cargo</p>
+      <input
+        type="text"
+        maxlength="40"
+        placeholder="Digite sua Cargo"
+        required
+      />
+
+      <p>Descrição do cargo</p>
+      <textarea name="cargo" id="" cols="50" rows="10" maxlength="40" required>
+        Escreva sobre você</textarea
+      >
+
+      <p>Data de inicio</p>
+      <input type="date" required />
+    </fieldset>
+  </body>
+</html>
+
+<!-- Criando um formulário de currículo.
+Crie um arquivo HTML chamado form.html para o formulário.
+Caso julgue necessário, crie estilos CSS para o seu formulário, de acordo com a sua imaginação. Coloque-os em um arquivo styles.css .
+Crie também um arquivo script.js para seu código JavaScript .
+Vamos criar um formulário de cadastro de currículo com base na especificação a seguir:
+Faça as validações inicialmente pelo HTML
+Crie um <fieldset> para os seguintes dados pessoais:
+Nome - Texto
+Limite de 40 caracteres
+Campo obrigatório
+Email - Texto
+Limite de 50 caracteres
+Campo obrigatório
+CPF - Texto
+Limite de 11 caracteres
+Campo obrigatório
+Endereço - Texto
+Limite de 200 caracteres
+Campo obrigatório
+Cidade - Texto
+Limite de 28 caracteres
+Campo obrigatório
+Estado - Select
+Todos os estados do Brasil
+Utilize estruturas de repetição via JavaScript para gerar os <option>
+Campo obrigatório
+Tipo - Radio Button
+Casa, Apartamento
+Campo obrigatório
+Crie outro <fieldset> para dados do seu último emprego
+Resumo do currículo - TextArea
+Limite de 1000 caracteres
+Campo obrigatório
+Cargo - Texto
+Limite de 40 caracteres
+Campo obrigatório
+Descrição do cargo - Texto
+Limite de 500 caracteres
+Campo obrigatório
+Data de início - Texto
+Verificar o formato da data dd/mm/aaaa .
+O dia deve ser > 0 e <= 31.
+O mês deve ser > 0 e <= 12.
+O ano não pode ser negativo.
+Caso alguma das condições seja inválida no momento do envio do formulário, exibir via alert uma mensagem de erro contextualizada.
+Campo obrigatório -->
