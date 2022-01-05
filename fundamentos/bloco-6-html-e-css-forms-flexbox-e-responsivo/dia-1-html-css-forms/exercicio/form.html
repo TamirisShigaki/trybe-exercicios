@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercicio 6.1</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
   <main>
+    <form action="" method="get">
     <fieldset>
       <label for="nome"
-        >Nome: 
+        >Nome:
+        <br> 
         <input
           type="text"
           maxlength="40"
@@ -22,7 +25,8 @@
       </label>
       <br><br>
       <label for="email"
-        >E-mail: 
+        >E-mail:
+        <br> 
         <input
           type="email"
           maxlength="50"
@@ -35,6 +39,7 @@
       <br><br>
       <label for="cpf"
         >CPF: 
+        <br>
         <input
           type="text"
           maxlength="11"
@@ -46,7 +51,8 @@
       </label>
       <br><br>
       <label for="endereco"
-        >Endereço: 
+        >Endereço:
+        <br>
         <input
           type="text"
           maxlength="200"
@@ -58,7 +64,8 @@
       </label>
       <br><br>
       <label for="cidade"
-        >Cidade: 
+        >Cidade:
+        <br>
         <input
           type="text"
           maxlength="28"
@@ -70,16 +77,16 @@
       </label>
       <br><br>
       <label for="estados">
-        Selecione o estado: 
+        Selecione o estado:
+        <br>
         <select name="estados" id="estados" required></select></label>
       <br>
       <p>Tipo de moradia:</p>
       <label for="casa">
-        <input type="radio" name="casa" id="casa" required checked /> Casa
+        <input type="radio" name="moradia" id="casa" value="Casa" required checked /> Casa
       </label>
-      <br>
       <label for="ap">
-        <input type="radio" name="ap" id="ap" required /> Apartamento
+        <input type="radio" name="moradia" id="ap" value="Apartamento" required /> Apartamento
       </label>
       <br><br>
     </fieldset>
@@ -91,8 +98,8 @@
         <textarea
           name="sobre-mim"
           id="sobre-mim"
-          cols="70"
-          rows="15"
+          cols="50"
+          rows="10"
           maxlength="1000"
           placeholder="Escreva sobre você"
           required
@@ -130,15 +137,18 @@
     <br></br>
     <button type="submit" id="enviar">Enviar</button>
     <button type="reset"id="limpar">Limpar</button>
+  </form>
+  <div id="resumo">
+    <h4>Resumo do Curriculo:</h4>
+    <p></p>
+  </div>
     </main>
     <script src="./script.js"></script>
   </body>
 </html>
 
 <!-- Criando um formulário de currículo.
-Crie um arquivo HTML chamado form.html para o formulário.
-Caso julgue necessário, crie estilos CSS para o seu formulário, de acordo com a sua imaginação. Coloque-os em um arquivo styles.css .
-Crie também um arquivo script.js para seu código JavaScript .
+
 Vamos criar um formulário de cadastro de currículo com base na especificação a seguir:
 Faça as validações inicialmente pelo HTML
 Crie um <fieldset> para os seguintes dados pessoais:
