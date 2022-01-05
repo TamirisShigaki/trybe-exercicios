@@ -5,88 +5,150 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercicio 6.1</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+  <main>
+    <form action="" method="get">
     <fieldset>
-      <p>Nome</p>
-      <input
-        type="text"
-        maxlength="40"
-        placeholder="Digite seu nome"
-        required
-      />
-      <p>E-mail</p>
-      <input
-        type="email"
-        maxlength="50"
-        placeholder="Digite seu e-mail"
-        required
-      />
-      <p>CPF</p>
-      <input type="text" maxlength="11" placeholder="Digite seu CPF" required />
-
-      <p>Endereço</p>
-      <input
-        type="text"
-        maxlength="200"
-        placeholder="Digite seu endereço"
-        required
-      />
-
-      <p>Cidade</p>
-      <input
-        type="text"
-        maxlength="28"
-        placeholder="Digite sua cidade"
-        required
-      />
-
-      <p>Estado</p>
-      <select name="estados" id="" required></select>
-
-      <p>Moradia</p>
-      <select name="tipo-moradia" id="" required>
-        <option value="casa">Casa</option>
-        <option value="apt">Apartamento</option>
-      </select>
+      <label for="nome"
+        >Nome:
+        <br> 
+        <input
+          type="text"
+          maxlength="40"
+          id="nome"
+          name="nome"
+          placeholder="Digite seu nome"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="email"
+        >E-mail:
+        <br> 
+        <input
+          type="email"
+          maxlength="50"
+          id="email"
+          name="email"
+          placeholder="Digite seu e-mail"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="cpf"
+        >CPF: 
+        <br>
+        <input
+          type="text"
+          maxlength="11"
+          id="cpf"
+          name="cpf"
+          placeholder="Digite seu CPF"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="endereco"
+        >Endereço:
+        <br>
+        <input
+          type="text"
+          maxlength="200"
+          id="endereco"
+          name="endereço"
+          placeholder="Digite seu endereço"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="cidade"
+        >Cidade:
+        <br>
+        <input
+          type="text"
+          maxlength="28"
+          id="cidade"
+          name="cidade"
+          placeholder="Digite sua cidade"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="estados">
+        Selecione o estado:
+        <br>
+        <select name="estados" id="estados" required></select></label>
+      <br>
+      <p>Tipo de moradia:</p>
+      <label for="casa">
+        <input type="radio" name="moradia" id="casa" value="Casa" required checked /> Casa
+      </label>
+      <label for="ap">
+        <input type="radio" name="moradia" id="ap" value="Apartamento" required /> Apartamento
+      </label>
+      <br><br>
     </fieldset>
-    <br />
+    <br /><br>
     <fieldset>
-      <p>Sobre mim</p>
+      <label for="sobre-mim"
+        >Sobre mim:
+        <br><br>
+        <textarea
+          name="sobre-mim"
+          id="sobre-mim"
+          cols="50"
+          rows="10"
+          maxlength="1000"
+          placeholder="Escreva sobre você"
+          required
+        ></textarea></label>
+      <br><br>
+      <label for="cargo"
+        >Cargo: 
+        <input
+          type="text"
+          maxlength="40"
+          id="cargo"
+          name="cargo"
+          placeholder="Digite seu Cargo"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="desc-cargo"
+      >Descrição do cargo: 
+      <br><br>
       <textarea
-        name="sobre-mim"
-        id=""
-        cols="70"
-        rows="15"
-        maxlength="1000"
-        required
-      >
-Escreva sobre você</textarea
-      >
-
-      <p>Cargo</p>
-      <input
-        type="text"
+        name="desc-cargo"
+        id="desc-cargo"
+        cols="50"
+        rows="10"
         maxlength="40"
-        placeholder="Digite sua Cargo"
+        placeholder="Descreva o cargo"
         required
-      />
-
-      <p>Descrição do cargo</p>
-      <textarea name="cargo" id="" cols="50" rows="10" maxlength="40" required>
-        Escreva sobre você</textarea
-      >
-
-      <p>Data de inicio</p>
-      <input type="date" required />
+      ></textarea></label>
+      <br><br>
+      <label for="data">Data de inicio</label>
+      <input type="date" id="data" name="data" required />
+    </label>
     </fieldset>
+    <br></br>
+    <button type="submit" id="enviar">Enviar</button>
+    <button type="reset"id="limpar">Limpar</button>
+  </form>
+  <div id="resumo">
+    <h4>Resumo do Curriculo:</h4>
+    <p></p>
+  </div>
+    </main>
+    <script src="./script.js"></script>
   </body>
 </html>
 
 <!-- Criando um formulário de currículo.
-Crie um arquivo HTML chamado form.html para o formulário.
-Caso julgue necessário, crie estilos CSS para o seu formulário, de acordo com a sua imaginação. Coloque-os em um arquivo styles.css .
-Crie também um arquivo script.js para seu código JavaScript .
+
 Vamos criar um formulário de cadastro de currículo com base na especificação a seguir:
 Faça as validações inicialmente pelo HTML
 Crie um <fieldset> para os seguintes dados pessoais:
