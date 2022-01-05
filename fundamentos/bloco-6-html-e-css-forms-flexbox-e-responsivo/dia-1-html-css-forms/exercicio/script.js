@@ -73,73 +73,54 @@ window.onload = function () {
 
   let botaoEnviar = document.querySelector("#enviar");
 
-  //! Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o preventDefault() . Note que isso vai impedir as validações do HTML ao fazer o submit. Implemente, agora, no Javascript , as validações que foram pedidas ao longo da montagem do formulário. Caso todos os dados sejam válidos, monte uma <div> com o consolidado dos dados que foram inseridos no formulário.
+  botaoEnviar.addEventListener("click", function (evento) {
+    evento.preventDefault();
+    let valores = [
+      "nome",
+      "email",
+      "cpf",
+      "endereço",
+      "cidade",
+      "sobre-mim",
+      "cargo",
+      "desc-cargo",
+      "data",
+    ];
+    limpar();
+    for (let index of valores) {
+      let resumo = document.querySelector("#resumo");
+      let erros = document.querySelector("#erros");
+      let cria = document.createElement("p");
+      let validarCampo = document.querySelector(`[name=${index}]`).value;
+      if (validarCampo.length > 0) {
+        cria.innerHTML = `${index}: ${validarCampo}`;
+        resumo.appendChild(cria);
+      } else {
+        cria.innerHTML = `Você deve preencher o campo: ${index}`;
+        erros.appendChild(cria);
+      }
+    }
+  });
 
-  function enviarDados(event) {
-    event.preventDefault();
-    let nome = document.querySelector("#nome");
-    let email = document.querySelector("#email");
-    let cpf = document.querySelector("#cpf");
-    let cidade = document.querySelector("#cidade");
-    let estado = document.querySelector("#estados");
-    let moradia = document.querySelector("[name=moradia]");
-    let sobreMim = document.querySelector("#sobre-mim");
-    let cargo = document.querySelector("#cargo");
-    let desCargo = document.querySelector("#desc-cargo");
-    let data = document.querySelector("#data");
-
-    let resumo = document.querySelector("#resumo p");
-
-    let tipo = null;
-    if (moradia.checked === true) {
-      tipo = "Casa";
-    } else {
-      tipo = "Apartamento";
+  function limpar() {
+    let resumo = document.querySelector("#resumo");
+    let erros = document.querySelector("#erros");
+    let limparResumo = document.querySelectorAll("#resumo p");
+    let limparErros = document.querySelectorAll("#erros p");
+    if (limparErros.length > 0) {
+      for (let i of limparErros) {
+        erros.removeChild(i);
+      }
     }
 
-    resumo.innerHTML = [
-      "Nome: " +
-        nome.value +
-        " " +
-        "e-mail: " +
-        email.value +
-        " " +
-        "CPF: " +
-        cpf.value +
-        " " +
-        "Cidade: " +
-        cidade.value +
-        " " +
-        "Estado: " +
-        estado.value +
-        " " +
-        "Tipo de moradia: " +
-        tipo +
-        " " +
-        "Descrição sobre Mim: " +
-        sobreMim.value +
-        " " +
-        "Cargo: " +
-        cargo.value +
-        " " +
-        "Descrição do Cargo: " +
-        desCargo.value +
-        " " +
-        "Data: " +
-        data.value,
-    ];
+    if (limparResumo.length > 0) {
+      for (let possicao of limparResumo) {
+        resumo.removeChild(possicao);
+      }
+    }
   }
-  botaoEnviar.addEventListener("click", enviarDados);
 
-  //! Caso haja algum dado inválido, mostre em uma <div> uma mensagem de erro. Se o erro for na Data de Início , a mensagem deve ser contextualizada.
-
-  //! Crie um botão Limpar que limpa todos os campos do formulário e a <div> com seu currículo também.
   let botaoLimpar = document.querySelector("#limpar");
-  botaoLimpar.addEventListener("click", limparCampos);
 
-  function limparCampos() {
-    let resumo = document.querySelector("#resumo");
-    let resumoP = document.querySelector("#resumo p");
-    resumo.removeChild(resumoP);
-  }
+  botaoLimpar.addEventListener("click", limpar);
 };

@@ -9,3 +9,17 @@ textarea {
   padding: 6px;
   font-size: 13px;
 }
+
+#erros {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(184, 185, 187);
+  padding: 6px;
+  font-size: 15px;
+}
+
+#resumo {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(184, 185, 187);
+  padding: 6px;
+  font-size: 15px;
+}
