@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 6.1</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <main>
+    <form action="" method="get">
+    <fieldset>
+      <label for="nome"
+        >Nome:
+        <br> 
+        <input
+          type="text"
+          maxlength="40"
+          id="nome"
+          name="nome"
+          placeholder="Digite seu nome"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="email"
+        >E-mail:
+        <br> 
+        <input
+          type="email"
+          maxlength="50"
+          id="email"
+          name="email"
+          placeholder="Digite seu e-mail"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="cpf"
+        >CPF: 
+        <br>
+        <input
+          type="text"
+          maxlength="11"
+          id="cpf"
+          name="cpf"
+          placeholder="Digite seu CPF"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="endereco"
+        >Endereço:
+        <br>
+        <input
+          type="text"
+          maxlength="200"
+          id="endereco"
+          name="endereço"
+          placeholder="Digite seu endereço"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="cidade"
+        >Cidade:
+        <br>
+        <input
+          type="text"
+          maxlength="28"
+          id="cidade"
+          name="cidade"
+          placeholder="Digite sua cidade"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="estados">
+        Selecione o estado:
+        <br>
+        <select name="estados" id="estados" required></select></label>
+      <br>
+      <p>Tipo de moradia:</p>
+      <label for="casa">
+        <input type="radio" name="moradia" id="casa" value="Casa" required checked /> Casa
+      </label>
+      <label for="ap">
+        <input type="radio" name="moradia" id="ap" value="Apartamento" required /> Apartamento
+      </label>
+      <br><br>
+    </fieldset>
+    <br /><br>
+    <fieldset>
+      <label for="sobre-mim"
+        >Sobre mim:
+        <br><br>
+        <textarea
+          name="sobre-mim"
+          id="sobre-mim"
+          cols="50"
+          rows="10"
+          maxlength="1000"
+          placeholder="Escreva sobre você"
+          required
+        ></textarea></label>
+      <br><br>
+      <label for="cargo"
+        >Cargo: 
+        <input
+          type="text"
+          maxlength="40"
+          id="cargo"
+          name="cargo"
+          placeholder="Digite seu Cargo"
+          required
+        />
+      </label>
+      <br><br>
+      <label for="desc-cargo"
+      >Descrição do cargo: 
+      <br><br>
+      <textarea
+        name="desc-cargo"
+        id="desc-cargo"
+        cols="50"
+        rows="10"
+        maxlength="40"
+        placeholder="Descreva o cargo"
+        required
+      ></textarea></label>
+      <br><br>
+      <label for="data">Data de inicio</label>
+      <input type="date" id="data" name="data" required />
+    </label>
+    </fieldset>
+    <br></br>
+    <button type="submit" id="enviar">Enviar</button>
+    <button type="reset"id="limpar">Limpar</button>
+  </form>
+  <div id="erros">
+    <h4>Campos obrigatórios que devem ser preenchidos</h4>
+</div><br>
+<div id="resumo">
+    <h4>Resumo das suas informações</h4>    
+</div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+<!-- Criando um formulário de currículo.
+
+Vamos criar um formulário de cadastro de currículo com base na especificação a seguir:
+Faça as validações inicialmente pelo HTML
+Crie um <fieldset> para os seguintes dados pessoais:
+Nome - Texto
+Limite de 40 caracteres
+Campo obrigatório
+Email - Texto
+Limite de 50 caracteres
+Campo obrigatório
+CPF - Texto
+Limite de 11 caracteres
+Campo obrigatório
+Endereço - Texto
+Limite de 200 caracteres
+Campo obrigatório
+Cidade - Texto
+Limite de 28 caracteres
+Campo obrigatório
+Estado - Select
+Todos os estados do Brasil
+Utilize estruturas de repetição via JavaScript para gerar os <option>
+Campo obrigatório
+Tipo - Radio Button
+Casa, Apartamento
+Campo obrigatório
+Crie outro <fieldset> para dados do seu último emprego
+Resumo do currículo - TextArea
+Limite de 1000 caracteres
+Campo obrigatório
+Cargo - Texto
+Limite de 40 caracteres
+Campo obrigatório
+Descrição do cargo - Texto
+Limite de 500 caracteres
+Campo obrigatório
+Data de início - Texto
+Verificar o formato da data dd/mm/aaaa .
+O dia deve ser > 0 e <= 31.
+O mês deve ser > 0 e <= 12.
+O ano não pode ser negativo.
+Caso alguma das condições seja inválida no momento do envio do formulário, exibir via alert uma mensagem de erro contextualizada.
+Campo obrigatório -->
