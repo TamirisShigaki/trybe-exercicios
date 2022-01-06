@@ -9,13 +9,14 @@
           <link rel="stylesheet" href="style.css">
           <script src="jquery-3.6.0.min.js"></script>
           <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+          
           <script src="script.js"></script>
+          <script  src = " https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js "></script>
 
           <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
           <script src="pikaday.js"></script>
 
     </head>  
-
   <body>
     <main>
       <header class="container text-center">
@@ -27,7 +28,7 @@
         <fieldset>
           <div>
             <label class="form-label" for="nome">Nome:
-              <input class="form-control" type="text" maxlength="40" id="nome" name="nome" placeholder="Digite seu nome" required />
+              <input class="form-control" type="text" minlength="3" maxlength="40" id="nome" name="nome" placeholder="Digite seu nome" required />
             </label>
           </div>
             <br>
@@ -39,19 +40,19 @@
             <br>
           <div>
             <label for="cpf" class="form-label">CPF: 
-              <input class="form-control" type="text" maxlength="11" id="cpf" name="cpf" placeholder="Digite seu CPF" required />
+              <input class="form-control" type="text" minlength="11" maxlength="11" id="cpf" name="cpf" placeholder="Digite seu CPF" required/>
             </label>
           </div>
             <br>
           <div>
             <label class="form-label" for="endereco">Endereço:
-              <input class="form-control" type="text" maxlength="200" id="endereco" name="endereço" placeholder="Digite seu endereço" required />
+              <input class="form-control" type="text" minlength="4" maxlength="200" id="endereco" name="endereço" placeholder="Digite seu endereço" required/>
             </label>
           </div>
             <br>
           <div>
             <label class="form-label" for="cidade">Cidade:
-              <input class="form-control" type="text" maxlength="28" id="cidade" name="cidade" placeholder="Digite sua cidade"required />
+              <input class="form-control" type="text" maxlength="28" id="cidade" name="cidade" placeholder="Digite sua cidade"required/>
             </label>
           </div>
             <br>
@@ -62,15 +63,15 @@
             </label>
           </div>
             <br>
-          <div>
+          <div id="moradia">
             <p class="lead">Tipo de moradia:</p>
               <label class="form-label" for="casa">
-                <input class="form-check-input" type="radio" name="moradia" id="casa" value="Casa" required checked /> Casa
+                <input class="form-check-input" type="radio" name="moradia" id="casa" value="Casa" required checked/> Casa
               </label>
           </div>   
           <div>    
               <label class="form-label" for="ap">
-                <input class="form-check-input" type="radio" name="moradia" id="ap" value="Apartamento" required /> Apartamento
+                <input class="form-check-input" type="radio" name="moradia" id="ap" value="Apartamento" required/> Apartamento
               </label>
           </div>
         </fieldset>
@@ -78,28 +79,27 @@
         <fieldset>
           <div>
             <label class="form-label" for="sobre-mim">Sobre mim:
-               <br>
-              <textarea class="form-control" name="sobre-mim" id="sobre-mim" cols="50" rows="10" maxlength="1000" placeholder="Escreva sobre você" required>
-              </textarea>
+              <br>
+              <textarea class="form-control" name="sobre-mim" id="sobre-mim" cols="50" rows="10" minlength="5" maxlength="1000" placeholder="Escreva sobre você" required></textarea>
             </label>
           </div>
             <br>
           <div>
             <label class="form-label" for="cargo">Cargo: 
-              <input class="form-control" type="text" maxlength="40" id="cargo" name="cargo" placeholder="Digite seu Cargo" required />
+              <input class="form-control" type="text" minlength="2" maxlength="40" id="cargo" name="cargo" placeholder="Digite seu Cargo" required/>
             </label>
           </div>
            <br>
           <div>
             <label class="form-label" for="desc-cargo">Descrição do cargo: 
               <br><br>
-              <textarea class="form-control" name="desc-cargo" id="desc-cargo" cols="50" rows="10" maxlength="40" placeholder="Descreva o cargo"required></textarea>
+              <textarea class="form-control" name="desc-cargo" id="desc-cargo" cols="50" rows="10" minlength="5" maxlength="40" placeholder="Descreva o cargo"required></textarea>
             </label>
           </div>
             <br>
           <div>
             <label class="form-label" for="data">Data de inicio</label>
-              <input class="form-control" type="text" id="datepicker" name="data" required />
+              <input class="form-control" type="text" id="datepicker" name="data" required/>
             </label>
           </div>
         </fieldset>
@@ -110,16 +110,6 @@
           </div>
             <br>
       </form>
-      <br>
-      <section>
-        <div id="erros">
-          <h5 class="lead">Campos obrigatórios que devem ser preenchidos:</h5>
-        </div>
-          <br>
-        <div id="resumo">
-          <h5 class="lead">Resumo das suas informações:</h5>    
-        </div>
-      </section>
     </main>
   </body>
 </html>
