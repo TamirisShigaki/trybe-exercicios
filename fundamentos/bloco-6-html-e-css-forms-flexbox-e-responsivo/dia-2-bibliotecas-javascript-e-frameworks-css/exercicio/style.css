@@ -1,25 +1,18 @@
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(214, 217, 220);
-  border-radius: 3px;
-  width: 95%;
-  padding: 6px;
-  font-size: 13px;
+body {
+  max-width: 80%;
+  margin: 40px auto;
+  background-color: rgb(200, 200, 243);
 }
 
-#erros {
-  background-color: rgb(255, 255, 255);
-  border: 2px solid rgb(184, 185, 187);
-  padding: 6px;
-  font-size: 15px;
+header,
+form,
+section {
+  background-color: rgb(223, 221, 221);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 15px rgb(149, 156, 156);
 }
 
-#resumo {
-  background-color: rgb(255, 255, 255);
-  border: 2px solid rgb(184, 185, 187);
-  padding: 6px;
-  font-size: 15px;
+.pika-single {
+  padding: 10px;
 }

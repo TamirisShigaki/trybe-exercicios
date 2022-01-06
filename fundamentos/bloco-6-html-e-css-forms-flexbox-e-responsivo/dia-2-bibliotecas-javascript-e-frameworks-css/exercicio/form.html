@@ -1,195 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercicio 6.1</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercício 6.1</title>
+          <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+          <link rel="stylesheet" href="style.css">
+          <script src="jquery-3.6.0.min.js"></script>
+          <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+          <script src="script.js"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+          <script src="pikaday.js"></script>
+
+    </head>  
+
   <body>
-  <main>
-    <form action="" method="get">
-    <fieldset>
-      <label for="nome"
-        >Nome:
-        <br> 
-        <input
-          type="text"
-          maxlength="40"
-          id="nome"
-          name="nome"
-          placeholder="Digite seu nome"
-          required
-        />
-      </label>
-      <br><br>
-      <label for="email"
-        >E-mail:
-        <br> 
-        <input
-          type="email"
-          maxlength="50"
-          id="email"
-          name="email"
-          placeholder="Digite seu e-mail"
-          required
-        />
-      </label>
-      <br><br>
-      <label for="cpf"
-        >CPF: 
-        <br>
-        <input
-          type="text"
-          maxlength="11"
-          id="cpf"
-          name="cpf"
-          placeholder="Digite seu CPF"
-          required
-        />
-      </label>
-      <br><br>
-      <label for="endereco"
-        >Endereço:
-        <br>
-        <input
-          type="text"
-          maxlength="200"
-          id="endereco"
-          name="endereço"
-          placeholder="Digite seu endereço"
-          required
-        />
-      </label>
-      <br><br>
-      <label for="cidade"
-        >Cidade:
-        <br>
-        <input
-          type="text"
-          maxlength="28"
-          id="cidade"
-          name="cidade"
-          placeholder="Digite sua cidade"
-          required
-        />
-      </label>
-      <br><br>
-      <label for="estados">
-        Selecione o estado:
-        <br>
-        <select name="estados" id="estados" required></select></label>
+    <main>
+      <header class="container text-center">
+        <h1>Formulário de Currículo</h1>
+          <p class="lead">Preencha os campos abaixo!</p>
+      </header>
+        <hr>
+      <form action="" method="get">
+        <fieldset>
+          <div>
+            <label class="form-label" for="nome">Nome:
+              <input class="form-control" type="text" maxlength="40" id="nome" name="nome" placeholder="Digite seu nome" required />
+            </label>
+          </div>
+            <br>
+          <div>
+            <label class="form-label" for="email">E-mail:
+              <input class="form-control" type="email" maxlength="50" id="email" name="email" placeholder="Digite seu e-mail" required />
+            </label>
+          </div>
+            <br>
+          <div>
+            <label for="cpf" class="form-label">CPF: 
+              <input class="form-control" type="text" maxlength="11" id="cpf" name="cpf" placeholder="Digite seu CPF" required />
+            </label>
+          </div>
+            <br>
+          <div>
+            <label class="form-label" for="endereco">Endereço:
+              <input class="form-control" type="text" maxlength="200" id="endereco" name="endereço" placeholder="Digite seu endereço" required />
+            </label>
+          </div>
+            <br>
+          <div>
+            <label class="form-label" for="cidade">Cidade:
+              <input class="form-control" type="text" maxlength="28" id="cidade" name="cidade" placeholder="Digite sua cidade"required />
+            </label>
+          </div>
+            <br>
+          <div>
+            <label class="form-label" for="estados">Selecione o estado:
+              <select class="form-select" name="estados" id="estados" required>
+              <select>
+            </label>
+          </div>
+            <br>
+          <div>
+            <p class="lead">Tipo de moradia:</p>
+              <label class="form-label" for="casa">
+                <input class="form-check-input" type="radio" name="moradia" id="casa" value="Casa" required checked /> Casa
+              </label>
+          </div>   
+          <div>    
+              <label class="form-label" for="ap">
+                <input class="form-check-input" type="radio" name="moradia" id="ap" value="Apartamento" required /> Apartamento
+              </label>
+          </div>
+        </fieldset>
+          <br>
+        <fieldset>
+          <div>
+            <label class="form-label" for="sobre-mim">Sobre mim:
+               <br>
+              <textarea class="form-control" name="sobre-mim" id="sobre-mim" cols="50" rows="10" maxlength="1000" placeholder="Escreva sobre você" required>
+              </textarea>
+            </label>
+          </div>
+            <br>
+          <div>
+            <label class="form-label" for="cargo">Cargo: 
+              <input class="form-control" type="text" maxlength="40" id="cargo" name="cargo" placeholder="Digite seu Cargo" required />
+            </label>
+          </div>
+           <br>
+          <div>
+            <label class="form-label" for="desc-cargo">Descrição do cargo: 
+              <br><br>
+              <textarea class="form-control" name="desc-cargo" id="desc-cargo" cols="50" rows="10" maxlength="40" placeholder="Descreva o cargo"required></textarea>
+            </label>
+          </div>
+            <br>
+          <div>
+            <label class="form-label" for="data">Data de inicio</label>
+              <input class="form-control" type="text" id="datepicker" name="data" required />
+            </label>
+          </div>
+        </fieldset>
+            <br>
+          <div>
+            <button class="btn btn-success" type="submit" id="enviar">Enviar</button>
+            <button class="btn btn-outline-danger" type="reset"id="limpar">Limpar</button>
+          </div>
+            <br>
+      </form>
       <br>
-      <p>Tipo de moradia:</p>
-      <label for="casa">
-        <input type="radio" name="moradia" id="casa" value="Casa" required checked /> Casa
-      </label>
-      <label for="ap">
-        <input type="radio" name="moradia" id="ap" value="Apartamento" required /> Apartamento
-      </label>
-      <br><br>
-    </fieldset>
-    <br /><br>
-    <fieldset>
-      <label for="sobre-mim"
-        >Sobre mim:
-        <br><br>
-        <textarea
-          name="sobre-mim"
-          id="sobre-mim"
-          cols="50"
-          rows="10"
-          maxlength="1000"
-          placeholder="Escreva sobre você"
-          required
-        ></textarea></label>
-      <br><br>
-      <label for="cargo"
-        >Cargo: 
-        <input
-          type="text"
-          maxlength="40"
-          id="cargo"
-          name="cargo"
-          placeholder="Digite seu Cargo"
-          required
-        />
-      </label>
-      <br><br>
-      <label for="desc-cargo"
-      >Descrição do cargo: 
-      <br><br>
-      <textarea
-        name="desc-cargo"
-        id="desc-cargo"
-        cols="50"
-        rows="10"
-        maxlength="40"
-        placeholder="Descreva o cargo"
-        required
-      ></textarea></label>
-      <br><br>
-      <label for="data">Data de inicio</label>
-      <input type="date" id="data" name="data" required />
-    </label>
-    </fieldset>
-    <br></br>
-    <button type="submit" id="enviar">Enviar</button>
-    <button type="reset"id="limpar">Limpar</button>
-  </form>
-  <div id="erros">
-    <h4>Campos obrigatórios que devem ser preenchidos</h4>
-</div><br>
-<div id="resumo">
-    <h4>Resumo das suas informações</h4>    
-</div>
+      <section>
+        <div id="erros">
+          <h5 class="lead">Campos obrigatórios que devem ser preenchidos:</h5>
+        </div>
+          <br>
+        <div id="resumo">
+          <h5 class="lead">Resumo das suas informações:</h5>    
+        </div>
+      </section>
     </main>
-    <script src="./script.js"></script>
   </body>
 </html>
 
-<!-- Criando um formulário de currículo.
-
-Vamos criar um formulário de cadastro de currículo com base na especificação a seguir:
-Faça as validações inicialmente pelo HTML
-Crie um <fieldset> para os seguintes dados pessoais:
-Nome - Texto
-Limite de 40 caracteres
-Campo obrigatório
-Email - Texto
-Limite de 50 caracteres
-Campo obrigatório
-CPF - Texto
-Limite de 11 caracteres
-Campo obrigatório
-Endereço - Texto
-Limite de 200 caracteres
-Campo obrigatório
-Cidade - Texto
-Limite de 28 caracteres
-Campo obrigatório
-Estado - Select
-Todos os estados do Brasil
-Utilize estruturas de repetição via JavaScript para gerar os <option>
-Campo obrigatório
-Tipo - Radio Button
-Casa, Apartamento
-Campo obrigatório
-Crie outro <fieldset> para dados do seu último emprego
-Resumo do currículo - TextArea
-Limite de 1000 caracteres
-Campo obrigatório
-Cargo - Texto
-Limite de 40 caracteres
-Campo obrigatório
-Descrição do cargo - Texto
-Limite de 500 caracteres
-Campo obrigatório
-Data de início - Texto
-Verificar o formato da data dd/mm/aaaa .
-O dia deve ser > 0 e <= 31.
-O mês deve ser > 0 e <= 12.
-O ano não pode ser negativo.
-Caso alguma das condições seja inválida no momento do envio do formulário, exibir via alert uma mensagem de erro contextualizada.
-Campo obrigatório -->
+<!-- 1.Adicione um framework CSS de sua escolha ao formulário que você construiu na última aula e o utilize para estilizar o formulário.
+Sugestões: Bulma , Bootstrap , Semantic UI e Materialize .
+2.Adicione uma biblioteca JavaScript de date picker ao formulário que você construiu na última aula. Utilize essa biblioteca no campo "Data de início" do formulário. Você pode remover as validações de data que adicionou, uma vez que a biblioteca se encarregará de permitir somente datas válidas.
+Sugestões: DatePickerX e Pikaday .
+spoiler-alert : a leitura de documentações pode parecer algo complexo de início mas é extremamente normal se você sentir alguma dificuldade. Algumas bibliotecas terão uma maneira mais direta de mostrar as informações, como é o caso da DatePickerX que indicamos acima. Outras tendem a ser mais detalhadas e exigem um pouco mais de atenção na leitura, o que pode parecer mais difícil a princípio, como a Pikaday , que também te indicamos. Sugerimos que você leia as duas documentações e escolha a que você compreender melhor a utilização. E não se preocupe, pois ler documentações fará parte de sua rotina na sua vida de pessoa desenvolvedora, e a experiência junto com a prática torna tudo mais intuitivo e simples.
+3.Adicione uma biblioteca JavaScript de validações ao formulário que você construiu na última aula. Utilize essa biblioteca para substituir as validações que você fez manualmente.
+Sugestões: Just-validate e popup-validation-->
