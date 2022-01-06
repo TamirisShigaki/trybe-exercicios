@@ -72,45 +72,135 @@ window.onload = function () {
   criaEstados();
 
   let botaoEnviar = document.querySelector("#enviar");
-  botaoEnviar.addEventListener("click", function (evento) {
-    evento.preventDefault();
-    let valores = [
-      "nome",
-      "email",
-      "cpf",
-      "endereço",
-      "cidade",
-      "moradia",
-      "estados",
-      "sobre-mim",
-      "cargo",
-      "desc-cargo",
-      "data",
-    ];
-    limpar();
-    for (let index of valores) {
-      let resumo = document.querySelector("#resumo");
-      let erros = document.querySelector("#erros");
-      let cria = document.createElement("p");
-      let validarCampo = document.querySelector(`[name=${index}]`).value;
+  botaoEnviar.addEventListener("click", function () {
+    const validation = new JustValidate("#enviar", {
+      errorFieldCssClass: "is-invalid",
+    });
 
-      if (validarCampo === "Casa") {
-        let tipoCasa = document.querySelector("[name=moradia]").checked;
-        if (tipoCasa === true) {
-          cria.innerHTML = `${index}: Casa`;
-          resumo.appendChild(cria);
-        } else {
-          cria.innerHTML = `${index}: Apartamento`;
-          resumo.appendChild(cria);
-        }
-      } else if (validarCampo.length > 0) {
-        cria.innerHTML = `${index}: ${validarCampo}`;
-        resumo.appendChild(cria);
-      } else {
-        cria.innerHTML = `Você deve preencher o campo: ${index}`;
-        erros.appendChild(cria);
-      }
-    }
+    validation
+      .addField("#nome", [
+        {
+          rule: "minLength",
+          value: 11,
+        },
+        {
+          rule: "maxLength",
+          value: 40,
+        },
+        {
+          rule: "required",
+          errorMessage: "Campo obrigatório",
+        },
+      ])
+      .addField("#email", [
+        {
+          rule: "required",
+          errorMessage: "Campo obrigatório",
+        },
+        {
+          rule: "email",
+          errorMessage: "Email inválido!",
+        },
+      ])
+      .addField("#cpf", [
+        {
+          rule: "minLength",
+          value: 11,
+        },
+        {
+          rule: "maxLength",
+          value: 11,
+        },
+        {
+          rule: "cpf",
+          errorMessage: "CPF inválido!",
+        },
+      ])
+      .addField("#endereço", [
+        {
+          rule: "minLength",
+          value: 4,
+        },
+        {
+          rule: "maxLength",
+          value: 200,
+        },
+        {
+          rule: "required",
+          errorMessage: "Campo obrigatório",
+        },
+      ])
+      .addField("#cidade", [
+        {
+          rule: "minLength",
+          value: 3,
+        },
+        {
+          rule: "maxLength",
+          value: 28,
+        },
+        {
+          rule: "required",
+          errorMessage: "Campo obrigatório",
+        },
+      ])
+      .addField("#estado", [
+        {
+          rule: "required",
+        },
+      ])
+      .addField("#moradia", [
+        {
+          rule: "required",
+        },
+      ])
+      .addField("#sobre-mim", [
+        {
+          rule: "minLength",
+          value: 5,
+        },
+        {
+          rule: "maxLength",
+          value: 1000,
+        },
+        {
+          rule: "required",
+          errorMessage: "Campo obrigatório",
+        },
+      ])
+      .addField("#cargo", [
+        {
+          rule: "minLength",
+          value: 2,
+        },
+        {
+          rule: "maxLength",
+          value: 40,
+        },
+        {
+          rule: "required",
+          errorMessage: "Campo obrigatório",
+        },
+      ])
+      .addField("#desc-cargo", [
+        {
+          rule: "minLength",
+          value: 5,
+        },
+        {
+          rule: "maxLength",
+          value: 40,
+        },
+        {
+          rule: "required",
+          errorMessage: "Campo obrigatório",
+        },
+      ])
+      .addField("#datepicker", [
+        {
+          rule: "required",
+        },
+      ]);
   });
 
   function limpar() {
