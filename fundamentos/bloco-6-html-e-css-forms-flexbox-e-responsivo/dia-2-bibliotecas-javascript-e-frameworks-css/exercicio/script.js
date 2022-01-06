@@ -72,7 +72,6 @@ window.onload = function () {
   criaEstados();
 
   let botaoEnviar = document.querySelector("#enviar");
-
   botaoEnviar.addEventListener("click", function (evento) {
     evento.preventDefault();
     let valores = [
@@ -81,6 +80,8 @@ window.onload = function () {
       "cpf",
       "endereço",
       "cidade",
+      "moradia",
+      "estados",
       "sobre-mim",
       "cargo",
       "desc-cargo",
@@ -92,7 +93,17 @@ window.onload = function () {
       let erros = document.querySelector("#erros");
       let cria = document.createElement("p");
       let validarCampo = document.querySelector(`[name=${index}]`).value;
-      if (validarCampo.length > 0) {
+
+      if (validarCampo === "Casa") {
+        let tipoCasa = document.querySelector("[name=moradia]").checked;
+        if (tipoCasa === true) {
+          cria.innerHTML = `${index}: Casa`;
+          resumo.appendChild(cria);
+        } else {
+          cria.innerHTML = `${index}: Apartamento`;
+          resumo.appendChild(cria);
+        }
+      } else if (validarCampo.length > 0) {
         cria.innerHTML = `${index}: ${validarCampo}`;
         resumo.appendChild(cria);
       } else {
@@ -123,4 +134,14 @@ window.onload = function () {
   let botaoLimpar = document.querySelector("#limpar");
 
   botaoLimpar.addEventListener("click", limpar);
+
+  //! data
+
+  var field = document.getElementById("datepicker");
+  var picker = new Pikaday({
+    onSelect: function () {
+      field.value = picker.toString();
+    },
+  });
+  field.parentNode.insertBefore(picker.el, field.nextSibling);
 };
