@@ -78,3 +78,51 @@ body {
   padding: 20px;
   height: 1%;
 }
+
+@media print {
+  #header,
+  #navigation,
+  #footer {
+    display: none;
+  }
+
+  #content {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  #aside {
+    float: none;
+    display: block;
+    page-break-inside: avoid;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0px;
+  }
+
+  #header {
+    position: fixed;
+    margin-top: 0;
+  }
+
+  #aside {
+    display: none;
+  }
+
+  #content {
+    width: 100%;
+  }
+
+  #navigation ul {
+    margin-top: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
