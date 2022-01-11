@@ -54,7 +54,7 @@ figcaption {
   font-size: 1em;
 }
 
-@media screen and (min-width: 600px), (max-width: 1000px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
   body {
     background-color: darkgray;
     margin: 50px;
@@ -66,5 +66,20 @@ figcaption {
 
   h1 {
     font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1450px) {
+  body {
+    background-color: red;
+    margin: 55px;
+  }
+
+  article {
+    font-size: 35px;
+  }
+
+  h1 {
+    font-size: 55px;
   }
 }

@@ -7,3 +7,38 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 15px;
+    font-size: 18px;
+  }
+
+  header p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .container-div {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .main-content p {
+    font-size: 20px;
+  }
+
+  footer p {
+    font-size: 20px;
+  }
+}
