@@ -10,6 +10,7 @@ html {
 
 @media screen and (max-width: 600px) {
   body {
+    background-color: grey;
     margin: 15px;
     font-size: 18px;
   }
@@ -40,5 +41,49 @@ html {
 
   footer p {
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  body {
+    background-color: lightsalmon;
+    margin: 50px;
+  }
+
+  header p {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+  .container-div {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  .container-div li {
+    font-size: 20px;
+  }
+  .main-content p {
+    font-size: 25px;
+  }
+
+  footer p {
+    font-size: 25px;
   }
 }
