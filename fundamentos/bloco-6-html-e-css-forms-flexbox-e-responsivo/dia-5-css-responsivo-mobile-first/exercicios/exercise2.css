@@ -30,6 +30,18 @@ html {
     font-weight: bold;
   }
 
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
   .container-div {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -71,6 +83,11 @@ html {
   h2 {
     font-size: 35px;
   }
+
+  h3 {
+    font-size: 30px;
+  }
+
   .container-div {
     display: flex;
     flex-flow: column-reverse;
@@ -85,5 +102,54 @@ html {
 
   footer p {
     font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1450px) {
+  body {
+    background-color: mediumpurple;
+    margin: 70px;
+  }
+
+  header p {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 35px;
+  }
+
+  .container-div {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  .container-div li {
+    font-size: 25px;
+  }
+  .main-content p {
+    font-size: 30px;
+  }
+
+  footer p {
+    font-size: 30px;
   }
 }
