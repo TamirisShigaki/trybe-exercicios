@@ -69,7 +69,15 @@ const books = [
     'Isaac Asimov',
     'J. R. R. Tolkien',
   ];
-  
-  function fantasyOrScienceFictionAuthors() {
-    // escreva seu código aqui
+
+  function fantasyOrScienceFiction() {
+    return books.filter((livro) => (
+      livro.genre === 'Ficção Científica' || livro.genre === 'Fantasia'
+    ))
   }
+
+  function fantasyOrScienceFictionAuthors(fun) {
+    return fun().map((obj) => obj.author.name).sort();
+  };
+
+  console.log(fantasyOrScienceFictionAuthors(fantasyOrScienceFiction));
