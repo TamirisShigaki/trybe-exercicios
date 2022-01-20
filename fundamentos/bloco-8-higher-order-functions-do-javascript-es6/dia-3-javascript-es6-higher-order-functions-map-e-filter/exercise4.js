@@ -88,3 +88,12 @@ const expectedResult = [
   },
 ];
 
+function nameAndAge() {
+  const AnoAtual = new Date().getFullYear();
+  return books.filter((livro) => AnoAtual - livro.releaseYear > 60 ).sort((ano1, ano2) => ano1.releaseYear - ano2.releaseYear);
+}
+
+console.log(nameAndAge());
+
+//!Referencia
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear
