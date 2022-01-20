@@ -61,4 +61,14 @@ const books = [
     },
   ];
   
-  // Adicione o código do exercício aqui:
+  //7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+//Dica: cada inicial termina com um ponto.
+
+const expectedResult = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName() {
+  return books.filter((livro) => livro.author.name[1] === '.'   && livro.author.name[4] === '.' 
+  && livro.author.name[7] === '.').map((obj) => obj.name);
+}
+
+console.log(authorWith3DotsOnName());
