@@ -13,7 +13,7 @@ const compromissos = ['Acordar', 'Comer', 'Codar'];
 class App extends Component {
   render() {
     return (
-      compromissos.map((compromisso) => Task(compromisso))
+      compromissos.map((compromisso) =>  Task(compromisso))
     );
   }
 }
