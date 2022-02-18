@@ -5,6 +5,7 @@
 }
 
 .flex-container {
+    background-color: white;
     display: flex;
     justify-content: center;
     width: 300px;
@@ -15,13 +16,19 @@
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 15px 10px 15px;
+    opacity: 0.7;
 }
 
 button {
     border-radius: 5px;
     height: 25px; 
     width: auto;
-    background-color: rgb(116, 38, 96);
+    background-color: rgb(221, 23, 23);
+}
+
+button:hover {
+    border-radius: 5px;
+    background-color: black;
 }
 
 a {
