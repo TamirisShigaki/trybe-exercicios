@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 16px;
+}
+
+.main h1 {
+  font-size: 50px;
+  color: rgb(116, 38, 96);
+  text-shadow: 0.1em 0.1em 0.2em rgb(116, 38, 96);
+}
+
