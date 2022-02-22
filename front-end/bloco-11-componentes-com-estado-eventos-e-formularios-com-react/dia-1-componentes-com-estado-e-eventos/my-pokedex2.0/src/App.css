@@ -1,6 +1,10 @@
+body {
+  background-image: url('../public/pokebola.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .main {
   display: flex;
-  background-image: url('../public/pokebola.jpg');
   flex-direction: column;
   text-align: center;
   font-size: 16px;
