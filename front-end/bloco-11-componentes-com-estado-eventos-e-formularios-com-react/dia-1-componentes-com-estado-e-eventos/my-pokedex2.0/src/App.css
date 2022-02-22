@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  background-image: url('../public/pokebola.jpg');
+  flex-direction: column;
+  text-align: center;
+  font-size: 16px;
+  z-index: 2;
+}
+
+.main h1 {
+  font-size: 50px;
+  color: rgb(116, 38, 96);
+  text-shadow: 0.1em 0.1em 0.2em rgb(116, 38, 96);
+  background-color: rgb(12, 11, 11);
+  margin-top: 0;
+  opacity: 0.9;
+}
+
